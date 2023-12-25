@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Page</title>
+    <style>
+        /* Center everything vertically and horizontally */
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Center the h1 elements horizontally */
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>لا أعرف</h1>
+
+    <img src="/public/images/skull rotating.gif" alt="skull rotation" />
+
+    <h1>I don't know do it by yourself</h1>
+
+    <audio id="sound" autoplay muted>
+        <source src="/public/sounds/big-explosion.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        // Function to play the sound effect
+        function playSound() {
+            const sound = document.getElementById("sound");
+            sound.muted = false; // Unmute the audio
+            sound.play();
+        }
+
+        // Call the playSound function when the page loads
+        window.addEventListener("load", playSound);
+    </script>
+</body>
+</html>

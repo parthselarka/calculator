@@ -1,0 +1,74 @@
+/* style.css */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rebeccapurple; /* Your chosen color for the background */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.calculator {
+    width: 250px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 10px;
+    border: 1px solid black;        
+}
+
+.hold {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.input {
+    grid-column: 1 / -1; /* Makes input span all columns */
+    height: 50px;
+    margin-bottom: 10px;
+    background-color: #3498db;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 5px;
+}
+
+.button {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    background-color: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:active {
+    background-color: #95a5a6;
+}
+
+/* Additional styling for the first row buttons, if necessary */
+.hold > .button:nth-child(-n+5) {
+    background-color: #3498db;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+

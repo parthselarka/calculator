@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Screen</title>
+    <link rel="stylesheet" href="/public/css/loading.css">
+</head>
+<body>
+    <div class="loading-container">
+        <p class="loading" id="loading-tip"></p>
+        <div class="loading-animation"></div>
+    </div>
+
+    <script>
+     const loadingTips = [
+    "this may take some time", 
+    "loading....", 
+    "calculating the right answer....", 
+    "Please wait a moment.", 
+    "loading, please be patient", 
+    "Hold on while we prepare", 
+    "Data is on its way", 
+    "Sit tight, we're getting things ready", 
+    "This won't take too long", 
+    "we're almost there.",
+    "Just a moment, please",
+    "Getting things ready for you",
+    "Thank you for your patience",
+    "Almost there, don't go away",
+    "We appreciate your waiting",
+    "Hang tight, we're working",
+    "We're on it!",
+    "In the meantime, enjoy the music",
+    "Your request is being processed",
+    "We'll be with you shortly"
+    // Add more loading tips as needed
+];
+
+
+        function displayRandomTip() {
+            const loadingTipElement = document.getElementById("loading-tip");
+            const randomIndex = Math.floor(Math.random() * loadingTips.length);
+            loadingTipElement.textContent = loadingTips[randomIndex];
+        }
+
+        // Display a random loading tip initially and then at intervals
+        displayRandomTip();
+        setInterval(displayRandomTip, 2000); // Change tip every 5 seconds (5000 milliseconds)
+
+        // Redirect to the next page after 10 seconds
+        setTimeout(function () {
+            window.location.href = 'nextpage.html'; // Replace with the actual path to your next page
+        }, 30000); // 10,000 milliseconds = 10 seconds
+    </script>
+    
+</body>
+</html>
